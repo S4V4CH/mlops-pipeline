@@ -1,0 +1,7 @@
+{
+    "project_code": "mlops-pipeline",
+    "project_name": "MLOps Pipeline - California Housing",
+    "data_file": "Base_de_datos.csv",
+    "model_output_dir": "models/",
+    "random_state": 42
+}

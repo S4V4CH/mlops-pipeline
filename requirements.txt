@@ -1,0 +1,38 @@
+# Core Data Science Libraries
+pandas
+numpy
+scikit-learn
+
+# Visualization
+matplotlib
+seaborn
+plotly
+
+# Machine Learning
+xgboost
+lightgbm
+
+# Model Deployment
+fastapi
+uvicorn[standard]
+
+# Monitoring & Drift Detection
+evidently
+scipy
+
+# Streamlit Dashboard
+streamlit
+
+# Jupyter Notebooks
+jupyter
+ipykernel
+notebook
+
+# Utilities
+python-dotenv
+requests
+
+# Code Quality
+pytest
+black
+flake8
