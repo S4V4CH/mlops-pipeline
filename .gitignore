@@ -206,3 +206,11 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# MLOps - Model artifacts
+# Exclude pickle files from models directory (binary artifacts from experiments)
+models/*.pkl
+
+# MLOps - Monitoring reports
+# Exclude dynamically generated monitoring reports (drift detection outputs)
+monitoring_reports/

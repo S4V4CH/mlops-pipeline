@@ -36,7 +36,9 @@ st.markdown("---")
 st.sidebar.header("⚙️ Configuración")
 
 # Cargar archivos de monitoreo disponibles
-MONITORING_DIR = '../monitoring_reports/'
+# Obtener ruta absoluta del directorio de monitoreo
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+MONITORING_DIR = os.path.join(os.path.dirname(SCRIPT_DIR), 'monitoring_reports')
 
 if os.path.exists(MONITORING_DIR):
     drift_files = sorted(glob.glob(os.path.join(MONITORING_DIR, 'drift_summary_*.csv')), reverse=True)
