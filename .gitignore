@@ -143,6 +143,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+mlops-pipeline-venv/
 
 # Spyder project settings
 .spyderproject
