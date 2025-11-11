@@ -377,16 +377,6 @@ El proyecto incluye:
 - Learning curves
 - Drift reports
 
-## 🤝 Contribución
-
-Las contribuciones son bienvenidas. Por favor:
-
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
-
 ## 👤 Autor
 
 - GitHub: [@S4V4CH](https://github.com/S4V4CH)
