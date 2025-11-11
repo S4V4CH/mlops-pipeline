@@ -1,0 +1,74 @@
+# .dockerignore
+# Excluir archivos innecesarios del build de Docker
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+mlops-pipeline-venv/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation
+README.md
+*.md
+docs/
+
+# Test files
+tests/
+test_*.py
+*_test.py
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Data files (no incluir datasets grandes)
+*.csv
+*.xlsx
+*.json.bak
+
+# Monitoring reports (se generan en runtime)
+monitoring_reports/
+
+# Setup files
+setup.sh
+setup.bat
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Otros
+.env
+.env.local
+*.bak
+*.tmp

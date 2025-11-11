@@ -1,0 +1,51 @@
+# Docker Compose para MLOps Pipeline
+# Orquestación de servicios: API + Streamlit Dashboard
+
+version: '3.8'
+
+services:
+  # Servicio de API de predicción
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mlops-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/app/models
+      - ./monitoring_reports:/app/monitoring_reports
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - mlops-network
+
+  # Servicio de Dashboard Streamlit (opcional)
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mlops-dashboard
+    command: streamlit run src/streamlit_app.py --server.port=8501 --server.address=0.0.0.0
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./monitoring_reports:/app/monitoring_reports
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    depends_on:
+      - api
+    networks:
+      - mlops-network
+
+networks:
+  mlops-network:
+    driver: bridge
