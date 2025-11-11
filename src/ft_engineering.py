@@ -7,9 +7,6 @@ Este módulo contiene las funciones para el procesamiento y transformación de d
 - Encoding de variables categóricas
 - Escalado de features
 - División train/test
-
-Autor: MLOps Pipeline Project
-Fecha: Noviembre 2025
 """
 
 import pandas as pd
